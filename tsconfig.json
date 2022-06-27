@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "es6",
+		"module": "commonjs",
+		"sourceMap": true,
+		"allowJs": true,
+		"moduleResolution": "Node"
+	},
+	"exclude": ["node_modules", "**/*.spec.ts", "./dist/**"],
+	"include": ["**/*.ts"],
+	"files": ["app/index.ts"]
+}
