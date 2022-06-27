@@ -11,6 +11,8 @@ require('dotenv').config({ path: `${pathEnv}.env` });
 	'http://app.subatec.com',
 ]; */
 
+console.log(process.env.NODE_ENV);
+
 const io = new Server(+process.env.PORT || 8900, {
 	cors: { origin: '*' },
 });
