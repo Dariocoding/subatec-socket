@@ -11,7 +11,7 @@ require('dotenv').config({ path: `${pathEnv}.env` });
 	'http://app.subatec.com',
 ]; */
 
-const io = new Server(8900, {
+const io = new Server(+process.env.PORT || 8900, {
 	cors: { origin: '*' },
 });
 
