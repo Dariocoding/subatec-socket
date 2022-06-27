@@ -4,15 +4,15 @@ import * as redis from 'redis';
 const pathEnv = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `${pathEnv}.env` });
 
-const whitelist = [
+/* const whitelist = [
 	'http://localhost:3000',
 	'http://localhost:3001',
 	'https://subatec.com',
 	'http://app.subatec.com',
-];
+]; */
 
 const io = new Server(8900, {
-	cors: { origin: whitelist },
+	cors: { origin: '*' },
 });
 
 export default io;
