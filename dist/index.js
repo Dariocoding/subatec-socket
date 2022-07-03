@@ -6,7 +6,13 @@ const redis_adapter_1 = require("@socket.io/redis-adapter");
 const redis = require("redis");
 const pathEnv = process.env.NODE_ENV || 'development';
 require('dotenv').config({ path: `${pathEnv}.env` });
-const io = new socket_io_1.Server(8900, {
+/* const whitelist = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://subatec.com',
+    'http://app.subatec.com',
+]; */
+const io = new socket_io_1.Server(+process.env.PORT || 8900, {
     cors: { origin: '*' },
 });
 exports.default = io;
